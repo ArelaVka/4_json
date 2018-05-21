@@ -1,10 +1,9 @@
 # Prettify JSON
 
-[TODO. There will be project description]
-
+This script can help to convert native json file into beauty text.
 # Quickstart
 
-[TODO]
+
 
 Example of script launch on Linux, Python 3.5:
 
