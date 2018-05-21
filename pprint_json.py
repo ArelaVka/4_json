@@ -1,13 +1,16 @@
 import json
 
 
-def load_data(filepath):
-    pass
+def load_data(file_path):
+    jfile = json.load(open(file_path, "r", encoding="utf8"))
+    return jfile
 
 
-def pretty_print_json(data):
-    pass
+def pretty_print_json(input_file):
+    print(json.dumps(input_file, sort_keys=True, indent=4))
 
 
 if __name__ == '__main__':
-    pass
+    path = "alco_shops.json"
+    load_data(path)
+    pretty_print_json(load_data(path))
