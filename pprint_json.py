@@ -10,13 +10,13 @@ def load_data(input_file_path):
         return False
 
 
-def pretty_print_json(input_data):
-    print(json.dumps(input_data, sort_keys=True, indent=4, ensure_ascii=False))
+def pretty_print_json(data):
+    print(json.dumps(data, sort_keys=True, indent=4, ensure_ascii=False))
 
 
 if __name__ == "__main__":
-    path_of_file = argv[1]
-    if (len(path_of_file)>0) and load_data(path_of_file):
-        pretty_print_json(load_data(path_of_file))
+    input_data = load_data(argv[1])
+    if (len(argv[1]) > 0) and input_data:
+        pretty_print_json(input_data)
     else:
         print("Your json file is incorrect or you forgot enter the path")
