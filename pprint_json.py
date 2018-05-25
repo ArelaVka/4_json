@@ -10,8 +10,8 @@ def load_data(input_file_path):
         return False
 
 
-def pretty_print_json(data):
-    print(json.dumps(data, sort_keys=True, indent=4, ensure_ascii=False))
+def pretty_print_json(ugly_input_data):
+    print(json.dumps(ugly_input_data, sort_keys=True, indent=4, ensure_ascii=False))
 
 
 if __name__ == "__main__":
