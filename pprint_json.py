@@ -8,7 +8,7 @@ def load_data(input_file_path):
         with open(input_file_path, "r", encoding="utf8") as input_file:
             return json.load(input_file)
     except ValueError:
-        return False
+        return None
 
 
 def pretty_print_json(ugly_input_data):
