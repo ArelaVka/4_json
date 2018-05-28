@@ -6,7 +6,7 @@ def load_data(input_file_path):
     try:
         with open(input_file_path, "r", encoding="utf8") as input_file:
             return json.load(input_file)
-    except ValueError:
+    except FileNotFoundError:
         return False
 
 
@@ -15,7 +15,11 @@ def pretty_print_json(ugly_input_data):
 
 
 if __name__ == "__main__":
-    if len(argv) > 1 and load_data(argv[1]):
-        print(pretty_print_json(load_data(argv[1])))
+    if len(argv) > 1:
+        input_data = load_data(argv[1])
+        if input_data:
+            print(pretty_print_json(input_data))
+        else:
+            print("Your json file is incorrect")
     else:
-        print("Your json file is incorrect or you forgot enter the path")
+        print("You forgot enter the path to file")
